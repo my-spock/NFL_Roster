@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fantasy Roster</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/site.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <section class='panel panel-info'>
+        <div class='panel-heading'>
+            <h2>Roster</h2>
+        </div>
+        
+        <div class='panel-body'>
+            <div class='container-fluid'>
+                <div class='row' id="roster-display">
+                    <div class='player-card'></div>
+                </div>
+            </div>
+        
+            <div class='panel panel-primary'>
+                <div class='panel-heading'>
+                    <i class='fa fa-user-plus pull-left'></i>
+                    <h2 class='panel-title'>Add Player</h2>
+                </div>
+                <form class='form-horizontal' >
+                    <div class='form-group'>
+                        <label class='col-xs-2 col-xs-offset-1 text-center' for='player-name'>Player Name</label>
+                        <div class='col-xs-4'>
+                            <input type="text" class='form-control' placeholder='Player Name' name='playerName'>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label class='col-xs-2 col-xs-offset-1 text-center' for='player-position'>Position</label>
+                        <div class='col-xs-4'>
+                            <input  type='text' class='form-control' placeholder='Player Position' name='playerPosition'>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for="player-number" class='col-xs-2 col-xs-offset-1 text-center'>Number</label>
+                        <div class='col-xs-4'>
+                            <input type="text" class='form-control' placeholder='Player Number' name='playerNumber'>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <button type='submit' class='btn btn-primary col-xs-2 col-xs-offset-2'>Add To Roster</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script rel="text/javascript" src="app.js"></script>
+</body>
+</html>

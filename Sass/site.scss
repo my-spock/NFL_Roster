@@ -1,0 +1,28 @@
+#roster-display {
+    height: 200px;
+    border: black solid;
+}
+
+#player-form {
+    max-width: 75%;
+    display: float;
+}
+
+.player-card {
+    display: inline-block;
+    border: black solid 1px;
+    margin: 5 5;
+}
+
+div.panel-body {
+    padding-top: 0;
+}
+
+.panel-heading {
+    padding: 0;
+    margin-bottom: 15;
+    
+    h2, i {
+        margin: 10 0 0 0;
+    }
+}
