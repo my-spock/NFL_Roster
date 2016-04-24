@@ -3,55 +3,68 @@
     <meta charset="UTF-8">
     <title>Fantasy Roster</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/site.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
     <section class='panel panel-info'>
-        <div class='panel-heading'>
-            <h2>Roster</h2>
+        <div class='panel-heading' id='title'>
+            <h2>Fantasy Team</h2>
         </div>
         
-        <div class='panel-body'>
-            <div class='container-fluid'>
-                <div class='row' id="roster-display">
-                    <div class='player-card'></div>
-                </div>
-            </div>
+        <div class='panel-body' id='roster-display'>
+        </div>
         
             <div class='panel panel-primary'>
                 <div class='panel-heading'>
                     <i class='fa fa-user-plus pull-left'></i>
-                    <h2 class='panel-title'>Add Player</h2>
+                    <h2 class='panel-title'>Add Pokemon</h2>
                 </div>
-                <form class='form-horizontal' >
+                <form class='form-horizontal' id='input-form'>
                     <div class='form-group'>
-                        <label class='col-xs-2 col-xs-offset-1 text-center' for='player-name'>Player Name</label>
+                        <label class='col-xs-2 col-xs-offset-1 text-center' for='pokemon-name'>Name</label>
                         <div class='col-xs-4'>
-                            <input type="text" class='form-control' placeholder='Player Name' name='playerName'>
+                            <input type="text" class='form-control' placeholder='Pikachu' name='pokemonName'>
+                        </div>
+                    </div>
+                    <!--<div class='form-group'>
+                        <label class='col-xs-2 col-xs-offset-1 text-center' for='pokemon-type'>Type</label>
+                        <div class='col-xs-4'>
+                            <input  type='text' class='form-control' placeholder='Electric' name='pokemonType'>
                         </div>
                     </div>
                     <div class='form-group'>
-                        <label class='col-xs-2 col-xs-offset-1 text-center' for='player-position'>Position</label>
+                        <label for="pokemon-ability" class='col-xs-2 col-xs-offset-1 text-center'>Ability</label>
                         <div class='col-xs-4'>
-                            <input  type='text' class='form-control' placeholder='Player Position' name='playerPosition'>
+                            <input type="text" class='form-control' placeholder='Static' name='pokemonAbility'>
                         </div>
-                    </div>
-                    <div class='form-group'>
-                        <label for="player-number" class='col-xs-2 col-xs-offset-1 text-center'>Number</label>
-                        <div class='col-xs-4'>
-                            <input type="text" class='form-control' placeholder='Player Number' name='playerNumber'>
-                        </div>
-                    </div>
-                    <div class='form-group'>
-                        <button type='submit' class='btn btn-primary col-xs-2 col-xs-offset-2'>Add To Roster</button>
+                    </div>-->
+                    <div id='submit' class='form-group'>
+                        <button id='button' type='submit' class='btn btn-primary col-xs-2 col-xs-offset-2'>Find Pokemon</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
     
+    <script id="card-template" type="text/x-handlebars-template">
+        <div class='col-xs-3'>
+            <panel class='panel panel-success text-center'>
+                <div class='panel-heading text-center'>
+                    <button class='btn btn-danger' type='button'>Remove</button>
+                </div>
+                <div class='panel-body'>
+                    <img src={{imgUrl}} class='sprite'>
+                    <h1>{{name}}</h1>
+                    <p>Type(s): {{types}}</p>
+                </div>
+            </panel>
+        </div>
+    </script>
+    
     <script rel="text/javascript" src="app.js"></script>
+    <script src="poke-service.js"></script>
 </body>
 </html>

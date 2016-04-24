@@ -1,33 +1,19 @@
 /* line 1, ../Sass/site.scss */
-#roster-display {
-  height: 200px;
-  border: black solid;
-}
-
-/* line 6, ../Sass/site.scss */
-#player-form {
-  max-width: 75%;
-  display: float;
-}
-
-/* line 11, ../Sass/site.scss */
-.player-card {
-  display: inline-block;
-  border: black solid 1px;
-  margin: 5 5;
-}
-
-/* line 17, ../Sass/site.scss */
 div.panel-body {
   padding-top: 0;
 }
 
-/* line 21, ../Sass/site.scss */
-.panel-heading {
+/* line 5, ../Sass/site.scss */
+#title {
   padding: 0;
   margin-bottom: 15;
 }
-/* line 25, ../Sass/site.scss */
-.panel-heading h2, .panel-heading i {
+/* line 9, ../Sass/site.scss */
+#title h2, #title i {
   margin: 10 0 0 0;
+}
+
+/* line 15, ../Sass/site.scss */
+#roster-display #card-template {
+  border: solid black 5px;
 }
